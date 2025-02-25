@@ -2,7 +2,7 @@ import './App.css';
 import DurationExercise from "./components/DurationExercise";
 import RepetitionExercise from './components/RepetitionExercise';
 import RunningExercise from './components/RunningExercise';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom"
+import { BrowserRouter as Route, Routes, useNavigate } from "react-router-dom";  
 
 function StartHome() {
   return (
@@ -32,12 +32,15 @@ function ExerciseButtons() {
 function App() {
   return (
     <div className="App">
+      <Router basename="/new-exercise-app">
       <Routes>
         <Route path="/" element={<StartHome />} />
         <Route path="/stair-master" element={<DurationExercise />} />
         <Route path="/hack-squat" element={<RepetitionExercise />} />
         <Route path="/run-time" element={<RunningExercise />} />
       </Routes>
+      </Router>
+      
     </div>
   );
 }
