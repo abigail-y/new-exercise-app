@@ -1,13 +1,65 @@
-body {
+/* Import a modern sans font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body, html, #root, .App {
+  height: 100%;
+  background-color: #111827; /* deep gray/black */
+  color: #f1f5f9; /* soft white text */
+}
+
+/* Header styles */
+.app-Header {
+  padding: 2rem;
+  text-align: center;
+  background-color: #1f2937; /* slightly lighter black */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  border-bottom: 1px solid #374151;
+}
+
+.app-Header h1 {
+  font-size: 2.5rem;
+  color: #22c55e; /* neon green */
+  margin-bottom: 1rem;
+}
+
+/* Navigation and buttons */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav li {
+  display: inline;
+}
+
+nav button {
+  padding: 0.75rem 1.5rem;
+  background-color: #22c55e;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.4);
+}
+
+nav button:hover {
+  background-color: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* Make sure exercise component pages don't break styling */
+.App {
+  padding: 1rem;
 }
